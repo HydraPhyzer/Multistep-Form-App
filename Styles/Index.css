@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(194, 255, 247, 0.8), white);
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .Box {
+  border-radius: 10px;
+  position: absolute;
+  height: 70%;
+  width: 70%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(194, 255, 247, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .Box .Count {
+  align-self: flex-start;
+  color: white;
+  background: url("../Assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  position: absolute;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 10px;
+  height: 95%;
+}
+body .Box .Count .Section {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+}
+body .Box .Count .Section p {
+  font-weight: lighter;
+}
+body .Box .Count .Section h5 {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+body .Box .Count .Section .No {
+  background-color: transparent;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  margin: 0px 15px 0px 0px;
+  color: white;
+  border: 2px solid white;
+}
+body .Box .Count .Section .No-1 {
+  background-color: black;
+}
+body .Box .Steps {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  width: 65%;
+  height: 90%;
+}
+@media (max-width: 810px) {
+  body .Box {
+    flex-direction: row;
+    padding: 0px;
+    width: 90%;
+  }
+  body .Box .Count {
+    width: 100%;
+    flex-direction: row;
+    max-height: 30%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: xx-small;
+  }
+  body .Box .Count .Section {
+    flex-direction: column;
+    gap: 10px 10px;
+  }
+  body .Box .Count .Section .No {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: xx-small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .Box .Steps {
+    width: 90%;
+    max-height: 80%;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  body .Box .Step-1,
+body .Box .Step-2,
+body .Box .Step-3,
+body .Box .Step-4 {
+    margin: 10px 0px;
+    font-size: small;
+  }
+  body .Box .Step-1 .Arcade,
+body .Box .Step-2 .Arcade,
+body .Box .Step-3 .Arcade,
+body .Box .Step-4 .Arcade {
+    height: 70px;
+    width: 70px;
+  }
+}
+body .Box .Step-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+body .Box .Step-1 .Button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: #34495e;
+}
+body .Box .Step-1 .Button:hover {
+  cursor: pointer;
+}
+body .Box .Step-1 .Name,
+body .Box .Step-1 .Email,
+body .Box .Step-1 .Phone {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+body .Box .Step-1 input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid gray;
+  width: 80%;
+}
+@media (max-width: 810px) {
+  body .Box .Step-1 input {
+    padding: 5px;
+  }
+}
+body .Box .Step-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  display: none;
+}
+body .Box .Step-2 .Button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: #34495e;
+}
+body .Box .Step-2 .Button:hover {
+  cursor: pointer;
+}
+body .Box .Step-2 .Cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .Box .Step-2 .Arcade {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  width: 30%;
+  border-radius: 5px;
+  background-color: rgba(194, 255, 247, 0.8);
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+body .Box .Step-2 .Arcade:hover {
+  border: 1px solid #34495e;
+  transform: translate(3px, -3px);
+  box-shadow: -5px 5px 0px 0px #34495e;
+}
+body .Box .Step-2 .Arcade .Icon img {
+  height: 40px;
+  width: 40px;
+}
+body .Box .Step-2 .Arcade .Icon {
+  justify-self: flex-start;
+}
+body .Box .Step-2 .Arcade .Proxy {
+  justify-self: end;
+  text-align: center;
+}
+@media (max-width: 810px) {
+  body .Box .Step-2 .Arcade {
+    height: 30%;
+    width: 30%;
+    font-size: small;
+    padding: 20px;
+  }
+  body .Box .Step-2 .Arcade .Icon img {
+    height: 20px;
+    width: 20px;
+  }
+}
+body .Box .Step-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  display: none;
+}
+body .Box .Step-3 .Button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: #34495e;
+}
+body .Box .Step-3 .Button:hover {
+  cursor: pointer;
+}
+body .Box .Step-3 .Neck {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+}
+body .Box .Step-3 input[type=checkbox] {
+  margin: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  accent-color: red;
+}
+body .Box .Step-3 .Brick {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  border-width: 1px;
+  border-style: dotted;
+  border-color: #34495e;
+}
+body .Box .Step-3 .Brick:hover {
+  background-color: rgb(238, 238, 238);
+}
+@media (max-width: 810px) {
+  body .Box .Step-3 {
+    font-size: x-small;
+  }
+  body .Box .Step-3 .Brick,
+body .Box .Step-3 .Neck {
+    padding: 5px;
+    border-radius: 2px;
+    margin: 5px;
+  }
+  body .Box .Step-3 input[type=checkbox] {
+    margin: 5px;
+    height: 10px;
+    width: 10px;
+    accent-color: red;
+  }
+}
+body .Box .Step-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  display: none;
+}
+body .Box .Step-4 .Button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: #34495e;
+}
+body .Box .Step-4 .Button:hover {
+  cursor: pointer;
+}
+body .Box .Step-4 .Mode,
+body .Box .Step-4 .Service,
+body .Box .Step-4 .Total {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted gray;
+}
+body .Box .Step-4 .Total {
+  color: blue;
+  font-weight: bold;
+}
+body .Box .No:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=Index.css.map */

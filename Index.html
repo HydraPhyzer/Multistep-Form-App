@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiform Website</title>
+    <link rel="stylesheet" href="./Styles/Index.css" />
+    <link
+      rel="shortcut icon"
+      href="./Assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./Javascript/Index.js"></script>
+  </head>
+  <body class="Body">
+    <div class="Box">
+      <div class="Count">
+        <div class="Section">
+          <div class="No No-1" onclick="Random(1)">1</div>
+          <div class="Info">
+            <p>Step 1</p>
+            <h5>Your Info</h5>
+          </div>
+        </div>
+        <div class="Section">
+          <div class="No No-2" onclick="Random(2)">2</div>
+          <div class="Info">
+            <p>Step 2</p>
+            <h5>Select Plan</h5>
+          </div>
+        </div>
+        <div class="Section">
+          <div class="No No-3" onclick="Random(3)">3</div>
+          <div class="Info">
+            <p>Step 3</p>
+            <h5>Add-On</h5>
+          </div>
+        </div>
+        <div class="Section">
+          <div class="No No-4" onclick="Random(4)">4</div>
+          <div class="Info">
+            <p>Step 4</p>
+            <h5>Summary</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="Steps">
+        <div class="Step-1">
+          <section>
+            <h3>Personal Info</h3>
+            <p>Please Provide Your Name, Email and Phone Number</p>
+          </section>
+          <section>
+            <div class="Name">
+              <label for="">Name</label>
+              <input type="text" placeholder="Peter Atkonson" />
+            </div>
+            <div class="Email">
+              <label for="">Email</label>
+              <input type="email" placeholder="John@John.com" />
+            </div>
+            <div class="Phone">
+              <label for="">Phone</label>
+              <input type="tel" placeholder="+92 123456789" />
+            </div>
+          </section>
+          <button class="Button" onclick="Increment(1)">Next Step</button>
+        </div>
+        <div class="Step-2">
+          <section>
+            <h3>Sleect Your Plan</h3>
+            <p>You Have the Plan For Monthly and Yearly Billing</p>
+          </section>
+
+          <section>
+            <div class="Cards">
+              <div class="Arcade Arcade-1" onclick="Arcade(1)">
+                <div class="Icon">
+                  <img src="./Assets/images/icon-arcade.svg" alt="" />
+                </div>
+
+                <div class="Proxy">
+                  <h5>Arcade</h5>
+                  <p>$9/mo</p>
+                </div>
+              </div>
+              <div class="Arcade Arcade-2" onclick="Arcade(2)">
+                <div class="Icon">
+                  <img src="./Assets/images/icon-advanced.svg" alt="" />
+                </div>
+                <div class="Proxy">
+                  <h5>Advanced</h5>
+                  <p>$12/mo</p>
+                </div>
+              </div>
+              <div class="Arcade Arcade-3" onclick="Arcade(3)">
+                <div class="Icon">
+                  <img src="./Assets/images/icon-pro.svg" alt="" />
+                </div>
+
+                <div class="Proxy">
+                  <h5>Pro</h5>
+                  <p>$15/mo</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <button class="Button" onclick="Increment(2)">Next Step</button>
+        </div>
+        <div class="Step-3">
+          <section>
+            <h3>Sleect Your Plan</h3>
+            <p>You Have the Plan For Monthly and Yearly Billing</p>
+          </section>
+
+          <section>
+            <div class="Brick">
+              <div class="Neck Neck-1" onclick="PlanSelect('Online Service' ,'Neck-1')">
+                <input type="checkbox" value="Online Service" />
+                <div>
+                  <p class="P1">Online Service</p>
+                  <p >Access to Multiplayer Service Games</p>
+                </div>
+              </div>
+              <div class="P2">+1$/mo</div>
+            </div>
+            <div class="Brick">
+              <div class="Neck Neck-2" onclick="PlanSelect('Larger Storage','Neck-2')">
+                <input type="checkbox" value="Online Service" />
+                <div>
+                  <p class="P1">Larger Storage</p>
+                  <p >Extra 1TB Cloud</p>
+                </div>
+              </div>
+              <div class="P2">+2$/mo</div>
+            </div>
+            <div class="Brick">
+              <div class="Neck Neck-3" onclick="PlanSelect('Customize Profile','Neck-3')">
+                <input type="checkbox" value="Online Service" />
+                <div>
+                  <p class="P1">Customize Profile</p>
+                  <p >Customize Theme on Profile</p>
+                </div>
+              </div>
+              <div class="P2">+2$/mo</div>
+            </div>
+          </section>
+
+          <button class="Button" onclick="Increment(3)">Next Step</button>
+        </div>
+        <div class="Step-4">
+          <section>
+            <h3>Finishing Up</h3>
+            <p>Double Check Eveythin Before Confirming OK !</p>
+          </section>
+
+          <section>
+            <div class="Mode">
+              <!-- <p>Arcade</p>
+              <p>$9/mo</p> -->
+            </div>
+
+            <div class="Services">
+              <!-- <div class="Service">
+                <p>Online Service</p>
+                <p>$1/mo</p>
+              </div>
+              <div class="Service">
+                <p>Local Storage</p>
+                <p>$1/mo</p>
+              </div> -->
+            </div>
+
+            <div class="Total">
+              <!-- <p>Total</p>
+              <p>$10/mo</p> -->
+            </div>
+          </section>
+
+          <button class="Button">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

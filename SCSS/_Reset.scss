@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin Bold-Font() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+@mixin Medium-Font() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+@mixin Regular-Font() {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}

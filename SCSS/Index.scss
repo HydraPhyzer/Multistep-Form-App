@@ -1,0 +1,315 @@
+@import "./Reset";
+@import "./Color\ and\ Weights";
+
+@mixin Gradient() {
+  background: linear-gradient(to bottom, $Secondary, $Primary);
+  background-repeat: no-repeat;
+}
+@mixin Flexes($Dir) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $Dir;
+}
+@mixin ButtonStyle() {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 5px;
+  color: $Primary;
+  background-color: $Button;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+@mixin Mobile {
+  @media (max-width: 810px) {
+    @content;
+  }
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  @include Gradient();
+  @include Medium-Font();
+  @include Flexes(column);
+
+  .Box {
+    border-radius: 10px;
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    background-color: $Primary;
+    padding: $Padding + 5px;
+    box-shadow: 0px 0px 10px 5px $Secondary;
+    @include Flexes(column);
+    justify-content: space-around;
+    // align-items:center;
+    .Count {
+      align-self: flex-start;
+      color: $Primary;
+      background: url("../Assets/images/bg-sidebar-desktop.svg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: fit-content;
+      @include Flexes(column);
+      width: 25%;
+      position: absolute;
+      overflow: hidden;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border-radius: 10px;
+      height: 95%;
+
+      .Section {
+        padding: $Padding + 10px;
+        @include Flexes(row);
+        align-items: flex-start;
+
+        p {
+          font-weight: lighter;
+        }
+        h5 {
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+
+        .No {
+          background-color: transparent;
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+          text-align: center;
+          margin: 0px $Padding + 10px 0px 0px;
+          color: $Primary;
+          border: 2px solid white;
+        }
+        .No-1
+        {
+          background-color: black;
+        }
+      }
+    }
+
+    .Steps {
+      display: flex;
+      align-self: flex-end;
+      justify-content: center;
+      width: 65%;
+      height: 90%;
+    }
+
+    @include Mobile {
+      flex-direction: row;
+      padding: 0px;
+      width: 90%;
+      .Count {
+        width: 100%;
+        flex-direction: row;
+        max-height: 30%;
+        height: fit-content;
+        font-size: xx-small;
+        .Section {
+          flex-direction: column;
+          gap: 10px 10px;
+          .No {
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            font-size: xx-small;
+            @include Flexes(column);
+          }
+        }
+      }
+      .Steps {
+        width: 90%;
+        max-height: 80%;
+        min-height: fit-content;
+      }
+      .Step-1,
+      .Step-2,
+      .Step-3,
+      .Step-4 {
+        margin: 10px 0px;
+        font-size: small;
+
+        .Arcade {
+          height: 70px;
+          width: 70px;
+        }
+      }
+    }
+    .Step-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+
+      // display: none;
+
+      .Button {
+        @include ButtonStyle();
+      }
+      .Name,
+      .Email,
+      .Phone {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0px;
+      }
+      input {
+        padding: $Padding + 5px;
+        border-radius: 5px;
+        border: 2px solid gray;
+        width: 80%;
+      }
+      @include Mobile {
+        input {
+          padding: 5px;
+        }
+      }
+    }
+
+    .Step-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+
+      display: none;
+      .Button {
+        @include ButtonStyle();
+      }
+      .Cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .Arcade {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        align-items: center;
+
+        height: 200px;
+        width: 30%;
+        border-radius: 5px;
+        background-color: $Secondary;
+        transition: all 0.5s ease;
+        overflow: hidden;
+        &:hover {
+          border: 1px solid $Button;
+          transform: translate(3px, -3px);
+          box-shadow: -5px 5px 0px 0px $Button;
+        }
+        .Icon img {
+          height: 40px;
+          width: 40px;
+        }
+        .Icon {
+          justify-self: flex-start;
+        }
+        .Proxy {
+          justify-self: end;
+          text-align: center;
+        }
+      }
+      @include Mobile() {
+        .Arcade {
+          height: 30%;
+          width: 30%;
+          font-size: small;
+          padding: 20px;
+          .Icon img {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+    .Step-3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+
+      display: none;
+      .Button {
+        @include ButtonStyle();
+      }
+      .Neck {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+      }
+      input[type="checkbox"] {
+        margin: 5px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        accent-color: red;
+      }
+      .Brick {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px;
+        border-width: 1px;
+        border-style: dotted;
+        border-color: $Button;
+        &:hover {
+          background-color: rgb(238, 238, 238);
+        }
+      }
+      @include Mobile {
+        font-size: x-small;
+        .Brick,
+        .Neck {
+          padding: 5px;
+          border-radius: 2px;
+          margin: 5px;
+        }
+        input[type="checkbox"] {
+          margin: 5px;
+          height: 10px;
+          width: 10px;
+          accent-color: red;
+        }
+      }
+    }
+
+    .Step-4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      .Button {
+        @include ButtonStyle();
+      }
+
+      display: none;
+
+      .Mode,
+      .Service,
+      .Total {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-bottom: 1px dotted gray;
+      }
+      .Total {
+        color: blue;
+        font-weight: bold;
+      }
+    }
+    .No:hover {
+      cursor: pointer;
+    }
+  }
+}
